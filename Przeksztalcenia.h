@@ -2,6 +2,7 @@
 #define PRZEKSZTALCENIA_H
 
 #include "Bitmapa.h"
+#include "BitmapaExt.h"
 #include <vector>
 
 /*
@@ -123,6 +124,7 @@ class ZlozeniePrzeksztalcen : public Przeksztalcenie
 {
 private:
 	std::vector<Przeksztalcenie*> przeksztalcenia;	//wektor wskaŸników na obiekty typu przekszta³cenie
+	BitmapaExt result;
 public:
 	/*
 	* Konstruktor domyœlny
@@ -131,15 +133,15 @@ public:
 
 	/*
 	* Wykonanie przekszta³ceñ
-	* @param obiekt typu bitmapa
+	* @param referencja do obiekt typu bitmapaExt
 	*/
-	Bitmapa przekszta³c(Bitmapa);
+	void przeksztalc(BitmapaExt&);
 
 	/*
 	* Dodanie kolejnych przekszta³ceñ do "listy"
 	* @param wskaŸnik na obiekt typu przeksztalcenie
 	*/
-	void dodajPrzeksztalcenie(Przeksztalcenie* p);
+	void dodajPrzeksztalcenie(Przeksztalcenie*);
 };
 
 #endif
