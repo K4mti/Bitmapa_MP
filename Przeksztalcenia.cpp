@@ -31,9 +31,44 @@ void Inwersja::przeksztalc(Bitmapa& mapa)
 	}
 }
 
-void Dylatacja::przeksztalc(Bitmapa& mapa)
-{
+void Dylatacja::przeksztalc(Bitmapa& map){
 
+	//kontener par
+	std::vector < std::pair<int, int>> pairs;
+
+	//para wspolrzednych do zmiany
+	std::pair<int, int> toChange;
+
+	//liczba wierszy
+	int length = map.length();
+	//liczba kolumn
+	int width = map.width();
+
+	//liczba sasiadow czarnych
+	int blackCells = 0;
+
+	for (int i = 0; i < length; i++) {
+		for (int j = 0; j < width; j++) {
+
+
+			if (map(i, j) == false && i > 0 && map(i - 1, j) == true) blackCells++;
+			else if (map(i, j) == false && j > 0 && map(i, j - 1) == true) blackCells++;
+			else if (map(i, j) == false && j < width - 1 && map(i, j + 1) == true) blackCells++;
+			else if (map(i, j) == false && i < length - 1 && map(i + 1, j) == true) blackCells++;
+
+			if (blackCells != 0) {
+				toChange.first = i;
+				toChange.second = j;
+				pairs.push_back(toChange);
+			}
+
+			blackCells = 0;
+		}
+	}
+
+	for (int i = 0; i < pairs.size(); i++) {
+		map(pairs[i].first, pairs[i].second) = true;
+	}
 }
 
 void Zerowanie::przeksztalc(Bitmapa& mapa)

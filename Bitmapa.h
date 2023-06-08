@@ -1,6 +1,9 @@
 #ifndef BITMAPA_H
 #define BITMAPA_H
 
+/*
+* Abstrakcyjna klasa do dziedziczenia
+*/
 class Bitmapa
 {
 public:

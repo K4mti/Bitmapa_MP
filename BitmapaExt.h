@@ -4,11 +4,13 @@
 #include"Bitmapa.h"
 #include<iostream>
 
-
+/*
+* Klasa z zaimplementowanymi operatorami
+*/
 class BitmapaExt : public Bitmapa {
-public:
-	int rows{ 0 };
-	int columns{ 0 };
+private:
+	int rows;
+	int columns;
 	bool** map;
 public:
 

@@ -30,4 +30,8 @@ int main()
     Erozja e;
     e.przeksztalc(b);
     std::cout << "\n" << b;
+
+    Dylatacja d;
+    d.przeksztalc(b);
+    std::cout << "\n" << b;
 }
