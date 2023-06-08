@@ -1,7 +1,11 @@
 ﻿#include <iostream>
+#include <locale.h>
+#include <stdio.h>
 
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    setlocale(LC_CTYPE, "Polish");
+
+    std::cout << "ąćżź";
 }
