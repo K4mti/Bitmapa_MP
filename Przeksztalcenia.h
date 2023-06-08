@@ -124,7 +124,7 @@ class ZlozeniePrzeksztalcen : public Przeksztalcenie
 {
 private:
 	std::vector<Przeksztalcenie*> przeksztalcenia;	//wektor wskaŸników na obiekty typu przekszta³cenie
-	BitmapaExt result;
+	Bitmapa* result;
 public:
 	/*
 	* Konstruktor domyœlny
@@ -135,7 +135,7 @@ public:
 	* Wykonanie przekszta³ceñ
 	* @param referencja do obiekt typu bitmapaExt
 	*/
-	void przeksztalc(BitmapaExt&);
+	void przeksztalc(Bitmapa&);
 
 	/*
 	* Dodanie kolejnych przekszta³ceñ do "listy"
