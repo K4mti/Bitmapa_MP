@@ -17,7 +17,13 @@ int main()
 
 
     Usrednienie u;
-    u.przeksztalc(a);
-    std::cout << "\n" << a;
+    Inwersja i;
 
+    ZlozeniePrzeksztalcen z;
+    z.dodajPrzeksztalcenie(&u);
+    z.dodajPrzeksztalcenie(&i);
+
+    z.przeksztalc(a);
+
+    std::cout << "\n" << a;
 }

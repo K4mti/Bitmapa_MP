@@ -124,7 +124,6 @@ class ZlozeniePrzeksztalcen : public Przeksztalcenie
 {
 private:
 	std::vector<Przeksztalcenie*> przeksztalcenia;	//wektor wskaŸników na obiekty typu przekszta³cenie
-	Bitmapa* result;
 public:
 	/*
 	* Konstruktor domyœlny

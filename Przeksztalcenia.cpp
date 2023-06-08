@@ -2,13 +2,10 @@
 
 void ZlozeniePrzeksztalcen::przeksztalc(Bitmapa& mapa)
 {
-	/*
-	this->result = mapa;
 	//wykonywanie przekszta³ceñ od koñca wektora (chronologiczne dodanie przekszta³cen)
 	for (int i = this->przeksztalcenia.size() - 1; i >= 0; i--) {
-		this->przeksztalcenia.at(i)->przeksztalc(this->result);
+		this->przeksztalcenia.at(i)->przeksztalc(mapa);
 	}
-	*/
 }
 
 void ZlozeniePrzeksztalcen::dodajPrzeksztalcenie(Przeksztalcenie* p)
