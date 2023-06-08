@@ -3,6 +3,8 @@
 
 #include "Bitmapa.h"
 #include "BitmapaExt.h"
+#include "LibExcp.h"
+#include <exception>
 #include <vector>
 
 /*
@@ -129,6 +131,7 @@ class ZlozeniePrzeksztalcen : public Przeksztalcenie
 {
 private:
 	std::vector<Przeksztalcenie*> przeksztalcenia;	//wektor wskaŸników na obiekty typu przekszta³cenie
+
 public:
 	/*
 	* Konstruktor domyœlny

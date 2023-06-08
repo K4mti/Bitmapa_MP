@@ -1,6 +1,7 @@
 #include "BitmapaExt.h"
 
 BitmapaExt::BitmapaExt(int rows, int columns) {
+	if (rows < 0 || columns < 0) throw MylogicExceptions::InvalidArgument("Wartoœæ argumentów nie mo¿e byæ mniejsza od zera!");
 
 	this->rows = rows;
 	this->columns = columns;

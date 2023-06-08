@@ -5,21 +5,17 @@
 #include<exception>
 #include <string>
 
-namespace MyRuntimeExceptions {
-	class FileOpenException : public std::runtime_error {
-	public:
-		FileOpenException() : runtime_error("Nie mozna otworzyc pliku") {
-		}
-		FileOpenException(std::string msg) : runtime_error(msg.c_str()) {
-		}
-	};
-}
-
 namespace MylogicExceptions {
 	class OutOfRange : public std::runtime_error {
 	public:
 		OutOfRange() : runtime_error("B³ad zakresu") {}
 		OutOfRange(std::string msg) : runtime_error(msg.c_str()) {}
+	};
+
+	class InvalidArgument : public std::invalid_argument {
+	public:
+		InvalidArgument() : invalid_argument("B³êdny argument"){}
+		InvalidArgument(std::string msg) : invalid_argument(msg.c_str()){}
 	};
 }
 

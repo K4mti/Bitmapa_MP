@@ -3,7 +3,7 @@
 void ZlozeniePrzeksztalcen::przeksztalc(Bitmapa& mapa)
 {
 	//wykonywanie przekszta³ceñ od koñca wektora (chronologiczne dodanie przekszta³cen)
-	for (int i = this->przeksztalcenia.size() - 1; i >= 0; i--) {
+	for (int i = 0; i <przeksztalcenia.size()-1; i++) {
 		this->przeksztalcenia.at(i)->przeksztalc(mapa);
 	}
 }
@@ -15,7 +15,9 @@ void ZlozeniePrzeksztalcen::dodajPrzeksztalcenie(Przeksztalcenie* p)
 
 void Inwersja::przeksztalc(Bitmapa& mapa)
 {
+	//liczba wierszy
 	int length = mapa.length();
+	//liczba kolumn
 	int width = mapa.width();
 
 	for (int i = 0; i < length; i++) 
@@ -70,7 +72,9 @@ void Dylatacja::przeksztalc(Bitmapa& map){
 
 void Zerowanie::przeksztalc(Bitmapa& mapa)
 {
+	//liczba wierszy
 	int length = mapa.length();
+	//liczba kolumn
 	int width = mapa.width();
 
 	for (int i = 0; i < length; i++)
@@ -84,10 +88,14 @@ void Zerowanie::przeksztalc(Bitmapa& mapa)
 
 void Usrednienie::przeksztalc(Bitmapa& mapa)
 {
+	//liczba wierszy
 	int length = mapa.length();
+	//liczba kolumn
 	int width = mapa.width();
 
+	//liczba sasiadow czarnych
 	int white = 0;
+	//liczba sasiadow bia³ych
 	int black = 0;
 
 	std::vector<bool> color;

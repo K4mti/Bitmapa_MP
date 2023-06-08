@@ -1,16 +1,15 @@
 #ifndef BITMAPAEXT_H
 #define BITMAPAEXT_H
 
-#include"Bitmapa.h"
-#include<iostream>
+#include "Bitmapa.h"
+#include "LibExcp.h"
+#include <iostream>
 
-/*
-* Klasa z zaimplementowanymi operatorami
-*/
+
 class BitmapaExt : public Bitmapa {
-private:
-	int rows;
-	int columns;
+public:
+	int rows{ 0 };
+	int columns{ 0 };
 	bool** map;
 public:
 
