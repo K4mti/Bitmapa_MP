@@ -142,7 +142,7 @@ public:
 	* Wykonanie przekszta³ceñ
 	* @param referencja do obiekt typu bitmapaExt
 	*/
-	void przeksztalc(Bitmapa&);
+	void przeksztalc(Bitmapa&) override;
 
 	/*
 	* Dodanie kolejnych przekszta³ceñ do "listy"
