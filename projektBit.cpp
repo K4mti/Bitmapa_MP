@@ -16,22 +16,14 @@ int main()
     std::cout << "\n" << a;
 
     Usrednienie u;
-    u.przeksztalc(a);
-    std::cout << "\n" << a;
-
     Inwersja i;
-    i.przeksztalc(a);
+
+    ZlozeniePrzeksztalcen z;
+    z.dodajPrzeksztalcenie(&u);
+    z.dodajPrzeksztalcenie(&i);
+
+    z.przeksztalc(a);
+
     std::cout << "\n" << a;
-    
-    BitmapaExt b(5, 5);
-    b(2, 2) = b(2, 1) = b(2, 3) = b(1, 2) = b(3, 2) = true;
-    std::cout << "\n" << b;
 
-    Erozja e;
-    e.przeksztalc(b);
-    std::cout << "\n" << b;
-
-    Dylatacja d;
-    d.przeksztalc(b);
-    std::cout << "\n" << b;
 }

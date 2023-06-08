@@ -32,6 +32,7 @@ public:
 	* Konstruktor domyœlny
 	*/
 	Inwersja() = default;
+protected:
 
 	/*
 	* Przes³oniêcie funkcji przekszta³æ
@@ -50,6 +51,7 @@ public:
 	* Konstruktor domyœlny
 	*/
 	Erozja() = default;
+protected:
 
 	/*
 	* Przes³oniêcie funkcji przekszta³æ
@@ -68,6 +70,7 @@ public:
 	* Konstruktor domyœlny
 	*/
 	Dylatacja() = default;
+protected:
 
 	/*
 	* Przes³oniêcie funkcji przekszta³æ
@@ -86,6 +89,7 @@ public:
 	* Konstruktor domyœlny
 	*/
 	Zerowanie() = default;
+protected:
 
 	/*
 	* Przes³oniêcie funkcji przekszta³æ
@@ -104,6 +108,7 @@ public:
 	* Konstruktor domyœlny
 	*/
 	Usrednienie() = default;
+protected:
 
 	/*
 	* Przes³oniêcie funkcji przekszta³æ
@@ -124,7 +129,6 @@ class ZlozeniePrzeksztalcen : public Przeksztalcenie
 {
 private:
 	std::vector<Przeksztalcenie*> przeksztalcenia;	//wektor wskaŸników na obiekty typu przekszta³cenie
-	Bitmapa* result;
 public:
 	/*
 	* Konstruktor domyœlny
