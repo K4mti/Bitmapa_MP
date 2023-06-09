@@ -3,7 +3,7 @@
 void ZlozeniePrzeksztalcen::przeksztalc(Bitmapa& mapa)
 {
 	//wykonywanie przekszta³ceñ od koñca wektora (chronologiczne dodanie przekszta³cen)
-	for (int i = 0; i <przeksztalcenia.size()-1; i++) {
+	for (int i = 0; i <przeksztalcenia.size(); i++) {
 		this->przeksztalcenia.at(i)->przeksztalc(mapa);
 	}
 }
