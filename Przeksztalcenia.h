@@ -10,13 +10,14 @@
 /*
 * Abstrakcyjna klasa s³u¿¹ca do dziedziczenia dla poszczególnych przekszta³ceñ
 */
+template<typename T>
 class Przeksztalcenie
 {
 public:
 	/*
 	* Wirtualna funkcja do przekszta³cania bitmapy
 	*/
-	virtual void przeksztalc(Bitmapa&) = 0;
+	virtual T przeksztalc(Bitmapa&) = 0;
 };
 
 
@@ -27,7 +28,7 @@ public:
 /*
 * Przekszta³ecnie Inwersja
 */
-class Inwersja : public Przeksztalcenie
+class Inwersja : public Przeksztalcenie<void>
 {
 public:
 	/*
@@ -46,7 +47,7 @@ protected:
 /*
 * Przekszta³ecnie Erozja
 */
-class Erozja : public Przeksztalcenie
+class Erozja : public Przeksztalcenie<void>
 {
 public:
 	/*
@@ -65,7 +66,7 @@ protected:
 /*
 * Przekszta³ecnie Dylatacja
 */
-class Dylatacja : public Przeksztalcenie
+class Dylatacja : public Przeksztalcenie<void>
 {
 public:
 	/*
@@ -84,7 +85,7 @@ protected:
 /*
 * Przekszta³ecnie Zerowanie
 */
-class Zerowanie : public Przeksztalcenie
+class Zerowanie : public Przeksztalcenie<void>
 {
 public:
 	/*
@@ -103,7 +104,7 @@ protected:
 /*
 * Przekszta³ecnie Usrednienie
 */
-class Usrednienie : public Przeksztalcenie
+class Usrednienie : public Przeksztalcenie<void>
 {
 public:
 	/*
@@ -127,7 +128,7 @@ protected:
 /*
 * Z³o¿enie przekszta³cen
 */
-class ZlozeniePrzeksztalcen : public Przeksztalcenie 
+class ZlozeniePrzeksztalcen : public Przeksztalcenie<void>
 {
 private:
 	std::vector<Przeksztalcenie*> przeksztalcenia;	//wektor wskaŸników na obiekty typu przekszta³cenie
