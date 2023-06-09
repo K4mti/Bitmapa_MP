@@ -7,7 +7,7 @@
 
 
 class BitmapaExt : public Bitmapa {
-public:
+private:
 	int rows{ 0 };
 	int columns{ 0 };
 	bool** map;

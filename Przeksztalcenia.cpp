@@ -8,7 +8,7 @@ void ZlozeniePrzeksztalcen::przeksztalc(Bitmapa& mapa)
 	}
 }
 
-void ZlozeniePrzeksztalcen::dodajPrzeksztalcenie(Przeksztalcenie* p)
+void ZlozeniePrzeksztalcen::dodajPrzeksztalcenie(Przeksztalcenie<void>* p)
 {
 	this->przeksztalcenia.push_back(p);	//dodanie wskaznika na obiekt typu przeksztalcenie do wektora zawieraj¹cego liste przekszta³cen
 }
