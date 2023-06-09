@@ -131,7 +131,7 @@ protected:
 class ZlozeniePrzeksztalcen : public Przeksztalcenie<void>
 {
 private:
-	std::vector<Przeksztalcenie*> przeksztalcenia;	//wektor wskaŸników na obiekty typu przekszta³cenie
+	std::vector<Przeksztalcenie<void>*> przeksztalcenia;	//wektor wskaŸników na obiekty typu przekszta³cenie
 
 public:
 	/*
@@ -149,7 +149,7 @@ public:
 	* Dodanie kolejnych przekszta³ceñ do "listy"
 	* @param wskaŸnik na obiekt typu przeksztalcenie
 	*/
-	void dodajPrzeksztalcenie(Przeksztalcenie*);
+	void dodajPrzeksztalcenie(Przeksztalcenie<void>*);
 };
 
 #endif
